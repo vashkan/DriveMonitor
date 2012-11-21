@@ -142,7 +142,7 @@
             // 
             this.StatusString.AutoSize = true;
             this.StatusString.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.StatusString.Location = new System.Drawing.Point(0, 549);
+            this.StatusString.Location = new System.Drawing.Point(0, 548);
             this.StatusString.Name = "StatusString";
             this.StatusString.Size = new System.Drawing.Size(35, 13);
             this.StatusString.TabIndex = 10;
@@ -153,7 +153,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.StatusString);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -174,6 +174,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Монитор  двигателей";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);

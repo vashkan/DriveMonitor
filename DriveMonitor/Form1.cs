@@ -50,9 +50,9 @@ namespace DriveMonitor
                 case Keys.Left: { Motors.Left(); break; }
                 case Keys.NumPad6:
                 case Keys.Right: { Motors.Right(); break; }
-                case Keys.ControlKey:
+                case Keys.NumPad5:
                 case Keys.Z: { Motors.IncPower(); break; }
-                case Keys.Menu:
+                case Keys.NumPad0:
                 case Keys.X: { Motors.DecPower(); break; }
                 case Keys.NumPad7: { Motors.Forward(); Motors.Left(); break; }
                 case Keys.NumPad9: { Motors.Forward(); Motors.Right(); break; }
@@ -104,6 +104,11 @@ namespace DriveMonitor
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Pult.m_formClosed = true;
         }
     }
 }

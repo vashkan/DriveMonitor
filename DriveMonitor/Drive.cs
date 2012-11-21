@@ -168,10 +168,11 @@ namespace DriveMonitor
         Int32 port;
         public string Status;
         public Drive Motors;
+        public bool m_formClosed;
 
         public Client()
         {
-            host = "192.168.1.132";
+            host = "192.168.0.103";
             port = 12000;
         }
 
@@ -190,8 +191,8 @@ namespace DriveMonitor
             using (serverSocket = ConnectSocket(host, port))
             {
                 Status = "conected";
-
-                while (serverSocket.Connected)
+                m_formClosed = false;
+                while (serverSocket.Connected && !m_formClosed)
                 {
                     lock (Motors.mre)
                     {
