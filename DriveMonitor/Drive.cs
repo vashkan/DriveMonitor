@@ -184,8 +184,6 @@ namespace DriveMonitor
 
         void Start()
         {
-            const Int32 c_microsecondsPerSecond = 1000000;
-
             bool _firstRun = true;
 
             using (serverSocket = ConnectSocket(host, port))
